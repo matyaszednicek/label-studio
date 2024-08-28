@@ -25,7 +25,7 @@ export const TopBar = observer(({ store }) => {
     <Block name="topbar" mod={{ newLabelingUI: isFF(FF_DEV_3873) }}>
       {isFF(FF_DEV_3873) ? (
         <Elem name="group">
-          <CurrentTask store={store} />
+          {/* <CurrentTask store={store} /> */}
           {store.hasInterface("annotations:view-all") && (
             <Tooltip title="View all annotations">
               <Button
@@ -77,7 +77,7 @@ export const TopBar = observer(({ store }) => {
       ) : (
         <>
           <Elem name="group">
-            <CurrentTask store={store} />
+            {/* <CurrentTask store={store} /> */}
             {!isViewAll && (
               <Annotations store={store} annotationStore={store.annotationStore} commentStore={store.commentStore} />
             )}
